@@ -6,3 +6,22 @@
 
 ### HMM based ASR
 음향(Acoustic), Lexicon, 언어(Language) 모델 3가지 부분으로 나누어지며. 각 부분들은 서로 독립적으로 모델링된다.
+
+
+오픈소스
+-Kaldi
+-Julius
+-Wav2Letter++
+-DeepSpeech2
+
+
+
+Deep Speech
+중국 대표 IT 기업 ‘바이두(baidu)’에서 공개한 End-to-End 음성 인식 모델 Deep Speech2 모델
+
+
+<small>
+Deep Speech: Scaling up end-to-end speech recognition
+Awni Hannun, Carl Case, Jared Casper, Bryan Catanzaro, Greg Diamos, Erich Elsen, Ryan Prenger, Sanjeev Satheesh, Shubho Sengupta, Adam Coates, Andrew Y. Ng
+https://arxiv.org/abs/1412.5567
+  </small>
