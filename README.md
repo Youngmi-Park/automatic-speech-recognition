@@ -28,14 +28,35 @@ e.g. 기존 언어 모델을 뉴스 코퍼스에서 학습시킨 언어 모델�
 
 * DeepSpeech2  (테스트하는 중)
 
+Mozilla DeepSpeech
+중국 바이두 연구소의 Baidu DeepSpeech를 모태로 한 오픈소스 음성 인식 엔진이다. 소스 코드가 모태는 아니고, 기계학습 모델 논문을 참고한 것이다. 
+Baidu 의 원본 Deep Speech 연구 논문을 기반으로하는 오픈 소스 음성-텍스트 엔진<br>
+다양한 기능과 사용 편의성을 고려할 때 최고의 음성 인식 도구 중 하나이다.<br>
+Tensorflow를 사용하여 빌드되며, 사용자 지정 데이터 세트를 사용하여 학습 가능하다.
+거대한 Mozilla Common Voice 데이터 세트에 대해 학습 되었으며, Mozilla Public License에 따라 라이선스가 부여된다. 
+가장 큰 장점은 모델 파일을 다운로드하고 몇 분 내에 로컬에서 추론을 수행할 수 있다는 것이다.
+하지만 DeepSpeech는 다른 언어에 활용하기에는 어려움이 있는데, 이는 예측하려는 언어로 사용자 지정 데이터 세트를 사용하여 모델을 미세 조정하면 된다.
+
+character-based CTC를 사용하는 모델
+기계학습 엔진으로는 TensorFlow를 활용하였고, 엔진 코드는 C/C++로 구현되어 있다. 때문에 C/C++은 완벽히 연동되고, 초고급 언어 역시 메이저(nodejs, python) 쪽은 이미 패키지 매니저를 통해 이용 가능하다. GO, Rust 같은 언어 지원도 별도 프로젝트로 진행하고 있다.
 
 
 
-
-
-Deep Speech
+### Deep Speech
 중국 대표 IT 기업 ‘바이두(baidu)’에서 공개한 End-to-End 음성 인식 모델 Deep Speech2 모델
+Mozilla DeepSpeech
+중국 바이두 연구소의 Baidu DeepSpeech를 모태로 한 오픈소스 음성 인식 엔진이다. 소스 코드가 모태는 아니고, 기계학습 모델 논문을 참고한 것이다. 
+Baidu 의 원본 Deep Speech 연구 논문을 기반으로하는 오픈 소스 음성-텍스트 엔진 입니다. 다양한 기능과 사용 편의성을 고려할 때 최고의 음성 인식 도구 중 하나입니다. Tensorflow를 사용하여 빌드되고, 사용자 지정 데이터 세트를 사용하여 학습 가능하고, 거대한 Mozilla Common Voice 데이터 세트에 대해 학습 되었으며, Mozilla Public License에 따라 라이선스가 부여됩니다. 가장 큰 장점은 모델 파일을 다운로드하고 몇 분 내에 로컬에서 추론을 수행할 수 있다.
+하지만 DeepSpeech는 다른 언어에 활용하기에는 어려움이 있는데, 이는 예측하려는 언어로 사용자 지정 데이터 세트를 사용하여 모델을 미세 조정하면 된다.
+
+character-based CTC를 사용하는 모델
+기계학습 엔진으로는 TensorFlow를 활용하였고, 엔진 코드는 C/C++로 구현되어 있다. 때문에 C/C++은 완벽히 연동되고, 초고급 언어 역시 메이저(nodejs, python) 쪽은 이미 패키지 매니저를 통해 이용 가능하다. GO, Rust 같은 언어 지원도 별도 프로젝트로 진행하고 있다.
+
 
 
 Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan C.
 https://arxiv.org/abs/1412.5567
+
+reference
+https://ichi.pro/ko/mozilla-deepspeechleul-sayonghayeo-jadong-eulo-jamag-saengseong-94748643243687
+https://ratsgo.github.io/speechbook/docs/neuralam/deepspeech
