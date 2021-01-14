@@ -16,10 +16,9 @@
 
 
 
-Deep Speech [^1]
+Deep Speech
 중국 대표 IT 기업 ‘바이두(baidu)’에서 공개한 End-to-End 음성 인식 모델 Deep Speech2 모델
 
 
-[^1]: Deep Speech: Scaling up end-to-end speech recognition
-Awni Hannun, Carl Case, Jared Casper, Bryan Catanzaro, Greg Diamos, Erich Elsen, Ryan Prenger, Sanjeev Satheesh, Shubho Sengupta, Adam Coates, Andrew Y. Ng
+Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan C.
 https://arxiv.org/abs/1412.5567
