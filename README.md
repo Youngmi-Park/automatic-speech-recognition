@@ -1,4 +1,4 @@
-## automatic-speech-recognition
+## Automatic Speech Recognition(ASR)
 
 기존 ASR에서는 P(W|O)를 모델링하기 위해 은닉 마르코프 모델-가우시안 혼합 모델(HMM-GMM)을 사용했다. 
 하지만 딥러닝의 발달로, 은닉 마르코프 모델 - 심층 신경망 모델(HMM-DNN)과 딥러닝 기반의 종단간 모델(End-to-End)이 등장했고 
