@@ -26,8 +26,11 @@ e.g. 기존 언어 모델을 뉴스 코퍼스에서 학습시킨 언어 모델�
 2014년 이후 업데이트 중단 상태
 
 * DeepSpeech2  (테스트하는 중)
+
 <br><br>
 ### Deep Speech
+https://github.com/mozilla/DeepSpeech
+
 중국 대표 IT 기업 ‘바이두(baidu)’에서 공개한 End-to-End 음성 인식 모델 Deep Speech2 모델
 Mozilla DeepSpeech
 중국 Baidu의 Baidu DeepSpeech 연구 논문을 기반으로 한 오픈소스 음성 인식 엔진(소스 코드가 모태는 아니고, 기계학습 모델 논문을 참고한 것) 
