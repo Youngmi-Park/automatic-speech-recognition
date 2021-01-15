@@ -45,7 +45,7 @@ https://github.com/mozilla/DeepSpeech
 Install virtualenv package.
 
 Create a DeepSpeech virtual environment
-$ virtualenv -p python3 $HOME/tmp/deepspeech-venv/
+'''$ virtualenv -p python3 $HOME/tmp/deepspeech-venv/'''
 
 Activating the environment
 $ source $HOME/tmp/deepspeech-venv/bin/activate
