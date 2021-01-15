@@ -40,14 +40,48 @@ Mozilla DeepSpeech
 하지만 DeepSpeech는 다른 언어에 활용하기에는 어려움이 있는데, 이는 예측하려는 언어로 사용자 지정 데이터셋을 사용해 모델을 미세 조정하면 된다.
 
 
+1. Setup python environment.
+Install virtualenv package.
+
+Create a DeepSpeech virtual environment
+$ virtualenv -p python3 $HOME/tmp/deepspeech-venv/
+
+Activating the environment
+$ source $HOME/tmp/deepspeech-venv/bin/activate
 
 
+Get the git-lfs repo:
+curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+
+Installing DeepSpeech Python bindings
+$ pip3 install deepspeech
+
+$ pip3 install --upgrade deepspeech
+
+$ pip3 install deepspeech-gpu
+
+$ pip3 install --upgrade deepspeech-gpu
 
 
+install git-lfs:
+sudo apt-get install git-lfs
 
-Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan C.
+virtual environment is a tool to create isolated python environments.
+Download the DeepSpeech github repository
+$ git clone https://github.com/mozilla/DeepSpeech
+
+Getting the pre-trained model
+wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.pbmm
+wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.scorer
+
+
+deepspeech --model deepspeech-0.9.3-models.pbmm --scorer deepspeech-0.9.3-models.scorer --audio my_audio_file.wav
+
+
+## reference
+
+[1] Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan C.
 https://arxiv.org/abs/1412.5567
 
-reference
-https://ichi.pro/ko/mozilla-deepspeechleul-sayonghayeo-jadong-eulo-jamag-saengseong-94748643243687
+[2] https://ichi.pro/ko/mozilla-deepspeechleul-sayonghayeo-jadong-eulo-jamag-saengseong-94748643243687
 https://ratsgo.github.io/speechbook/docs/neuralam/deepspeech
