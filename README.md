@@ -44,42 +44,50 @@ https://github.com/mozilla/DeepSpeech
 1. Setup python environment.
 Install virtualenv package.
 
-Create a DeepSpeech virtual environment
+2. Create a DeepSpeech virtual environment
 ~~~
 $ virtualenv -p python3 $HOME/tmp/deepspeech-venv/
 ~~~
 
-Activating the environment
+3. Activating the environment
+~~~
 $ source $HOME/tmp/deepspeech-venv/bin/activate
+~~~
 
-
-Get the git-lfs repo:
+4. Get the git-lfs repo:
+~~~
 curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
+~~~
 
-Installing DeepSpeech Python bindings
+5. Installing DeepSpeech Python bindings
+~~~
 $ pip3 install deepspeech
-
 $ pip3 install --upgrade deepspeech
-
+~~~
+~~~
 $ pip3 install deepspeech-gpu
-
 $ pip3 install --upgrade deepspeech-gpu
+~~~
 
-
-install git-lfs:
+6. install git-lfs:
+~~~
 sudo apt-get install git-lfs
+~~~
 
-virtual environment is a tool to create isolated python environments.
-Download the DeepSpeech github repository
+7. Download the DeepSpeech github repository
+~~~
 $ git clone https://github.com/mozilla/DeepSpeech
+~~~
 
-Getting the pre-trained model
+8. Getting the pre-trained model
+~~~
 wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.pbmm
 wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.scorer
+~~~
 
-
+~~~
 deepspeech --model deepspeech-0.9.3-models.pbmm --scorer deepspeech-0.9.3-models.scorer --audio my_audio_file.wav
-
+~~~
 
 ## reference
 
