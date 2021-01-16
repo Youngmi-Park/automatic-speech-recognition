@@ -88,6 +88,11 @@ wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0
 ~~~
 deepspeech --model deepspeech-0.9.3-models.pbmm --scorer deepspeech-0.9.3-models.scorer --audio my_audio_file.wav
 ~~~
+~~~
+deepspeech --model deepspeech-0.9.3-models.pbmm --scorer deepspeech-0.9.3-models.scorer --audio audio/2830-3980-0043.wav
+deepspeech --model deepspeech-0.9.3-models.pbmm --scorer deepspeech-0.9.3-models.scorer --audio audio/4507-16021-0012.wav
+deepspeech --model deepspeech-0.9.3-models.pbmm --scorer deepspeech-0.9.3-models.scorer --audio audio/8455-210777-0068.wav
+~~~
 
 ## reference
 
