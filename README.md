@@ -25,9 +25,9 @@ e.g. 기존 언어 모델을 뉴스 코퍼스에서 학습시킨 언어 모델�
 * ~~Julius~~<br>
 2014년 이후 업데이트 중단 상태
 
-* DeepSpeech2  (테스트하는 중)
+* DeepSpeech2  (테스트 중)
   + paepr review
-  + ai hub 한국어 음성 데이터 신청(https://aihub.or.kr/)
+  + AI Hub 한국어 음성 데이터 : http://www.aihub.or.kr/aidata/105
 
 <br><br>
 ### Mozilla Deep Speech
@@ -43,58 +43,7 @@ https://github.com/mozilla/DeepSpeech
 
 
 #### Using a Pre-trained Model
-1. Setup python environment.
-Install virtualenv package.
-
-2. Create a DeepSpeech virtual environment
-~~~
-$ virtualenv -p python3 $HOME/tmp/deepspeech-venv/
-~~~
-
-3. Activating the environment
-~~~
-$ source $HOME/tmp/deepspeech-venv/bin/activate
-~~~
-
-4. Get the git-lfs repo:
-~~~
-curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash
-~~~
-
-5. Installing DeepSpeech Python bindings
-~~~
-$ pip3 install deepspeech
-$ pip3 install --upgrade deepspeech
-~~~
-~~~
-$ pip3 install deepspeech-gpu
-$ pip3 install --upgrade deepspeech-gpu
-~~~
-
-6. install git-lfs:
-~~~
-sudo apt-get install git-lfs
-~~~
-
-7. Download the DeepSpeech github repository
-~~~
-$ git clone https://github.com/mozilla/DeepSpeech
-~~~
-
-8. Getting the pre-trained model
-~~~
-wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.pbmm
-wget https://github.com/mozilla/DeepSpeech/releases/download/v0.9.3/deepspeech-0.9.3-models.scorer
-~~~
-
-~~~
-deepspeech --model deepspeech-0.9.3-models.pbmm --scorer deepspeech-0.9.3-models.scorer --audio my_audio_file.wav
-~~~
-~~~
-deepspeech --model deepspeech-0.9.3-models.pbmm --scorer deepspeech-0.9.3-models.scorer --audio audio/2830-3980-0043.wav
-deepspeech --model deepspeech-0.9.3-models.pbmm --scorer deepspeech-0.9.3-models.scorer --audio audio/4507-16021-0012.wav
-deepspeech --model deepspeech-0.9.3-models.pbmm --scorer deepspeech-0.9.3-models.scorer --audio audio/8455-210777-0068.wav
-~~~
+link: https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Using-a-Pretrained-Model
 
 ## reference
 
