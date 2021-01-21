@@ -26,6 +26,8 @@ e.g. 기존 언어 모델을 뉴스 코퍼스에서 학습시킨 언어 모델�
 2014년 이후 업데이트 중단 상태
 
 * DeepSpeech2  (테스트하는 중)
+ + paepr review
+ + ai hub 한국어 음성 데이터 신청(https://aihub.or.kr/)
 
 <br><br>
 ### Mozilla Deep Speech
