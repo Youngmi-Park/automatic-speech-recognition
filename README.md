@@ -43,8 +43,7 @@ https://github.com/mozilla/DeepSpeech
 가장 큰 장점은 모델 파일을 다운로드하고 몇 분 내에 로컬에서 추론을 수행할 수 있다는 것이다.<br>
 ***하지만 DeepSpeech는 다른 언어에 활용하기는 어려움이 있는데, 이는 예측하려는 언어로 사용자 지정 데이터셋을 사용해 모델을 미세 조정하면 된다.***
 <br>
-엔진의 아키텍처는 원래 [Deep Speech : Scaling up end-to-end](https://arxiv.org/pdf/1412.5567v2.pdf)에서 제시된 것에서 동기가 부여되었다. 그러나 현재 엔진은 원래의 엔진과 많은 측면에서 다르다. 엔진의 핵심은 음성 스펙트로 그램을 수집하고 영어 텍스트 필사본을 생성하도록 훈련 된 RNN(recurrent neural network)이다.
-
+엔진의 아키텍처는 원래 [Deep Speech : Scaling up end-to-end](https://arxiv.org/pdf/1412.5567v2.pdf)에서 제시된 것에서 동기가 부여되었다. 그러나 현재 엔진은 원래의 엔진과 많은 측면에서 다르다. 엔진의 핵심은 음성 스펙트로 그램을 수집하고 영어 텍스트 필사본을 생성하도록 훈련 된 RNN(recurrent neural network)이다.<br>
 *스펙트로그램: 소리나 파동을 시각화하여 파악하기 위한 도구로, 파형과 스펙트럼의 특징이 조합되어 있다.
 
 #### Using a Pre-trained Model
