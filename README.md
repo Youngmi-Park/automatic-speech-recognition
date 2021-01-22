@@ -27,7 +27,8 @@ e.g. 기존 언어 모델을 뉴스 코퍼스에서 학습시킨 언어 모델�
 
 * DeepSpeech2  (테스트 중)
   + paepr review
-  + AI Hub 한국어 음성 데이터 : http://www.aihub.or.kr/aidata/105
+  + AI Hub 한국어 음성 데이터: http://www.aihub.or.kr/aidata/105
+  + preparation before training: https://github.com/sooftware/KoSpeech/wiki/Preparation-before-Training
 
 <br><br>
 ### Mozilla Deep Speech
