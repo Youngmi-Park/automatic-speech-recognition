@@ -47,7 +47,7 @@ https://github.com/mozilla/DeepSpeech
 **스펙트로그램: 소리나 파동을 시각화하여 파악하기 위한 도구로, 파형과 스펙트럼의 특징이 조합되어 있다.**
 
 ### Paper Review
-Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan C.
+1. [Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan](https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Paper-review)
 
 
 ### Using a Pre-trained Model
