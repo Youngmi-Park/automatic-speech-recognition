@@ -46,7 +46,7 @@ https://github.com/mozilla/DeepSpeech
 
 
 ### Using a Pre-trained Model
-https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Using-a-Pretrained-Model)
+https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Using-a-Pretrained-Model
 
 ### Paper Review
 1. [Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan](https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Paper-review)
