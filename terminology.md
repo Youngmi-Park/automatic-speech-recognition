@@ -1,5 +1,5 @@
 # 용어 정리
-### 스펙트로그램(Spectrogram) 
+### Spectrogram 
 소리나 파동을 시각화하여 파악하기 위한 도구로, 파형과 스펙트럼의 특징이 조합되어 있다. 
 x축은 시간(Time), y축은 주파수(Frequency), z 축은 진폭(Amplitude)을 나타낸다.
 
