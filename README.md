@@ -61,4 +61,5 @@ https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Using-a-Pretra
 https://arxiv.org/abs/1412.5567
 
 [2] https://ichi.pro/ko/mozilla-deepspeechleul-sayonghayeo-jadong-eulo-jamag-saengseong-94748643243687
-https://ratsgo.github.io/speechbook/docs/neuralam/deepspeech
+
+[3] https://ratsgo.github.io/speechbook/docs/neuralam/deepspeech
