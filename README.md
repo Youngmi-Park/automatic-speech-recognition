@@ -26,9 +26,11 @@ e.g. 기존 언어 모델을 뉴스 코퍼스에서 학습시킨 언어 모델�
 2014년 이후 업데이트 중단 상태
 
 * DeepSpeech2  (테스트 중)
-  + paepr review
+  + paepr review - 2021.01.26 완료
   + AI Hub 한국어 음성 데이터: http://www.aihub.or.kr/aidata/105
   + preparation before training: https://github.com/sooftware/KoSpeech/wiki/Preparation-before-Training
+  
+  
 
 <br><br>
 ## Mozilla Deep Speech
@@ -50,6 +52,7 @@ https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Using-a-Pretra
 
 ### Paper Review
 1. [Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan](https://github.com/Youngmi-Park/automatic-speech-recognition/edit/main/paper%20review.md)
+2. [Mozilla deepspeech](https://github.com/Youngmi-Park/automatic-speech-recognition/blob/main/mozilla-deepspeech.md)
 
 ## reference
 
