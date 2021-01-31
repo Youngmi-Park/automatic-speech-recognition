@@ -1,4 +1,5 @@
-**Mozilla DeepSpeech** **모델**               https://deepspeech.readthedocs.io/en/v0.9.3/index.html
+# Mozilla DeepSpeech
+link: https://deepspeech.readthedocs.io/en/v0.9.3/index.html
 
 2017년 12월 모델과 데이터셋 공개. 2020년 12월 19일 업데이트 자료를 참고하여 작성
 
@@ -12,7 +13,7 @@
 
 
 
-**ARCHITECTURE AND TRAINING**
+## ARCHITECTURE AND TRAINING
 
 이 프로젝트의 목표는 간단하고 개방적이며 유비쿼터스( simple, open, and ubiquitous) 음성 인식 엔진을 만드는 것이다. 엔진을 실행하는데 서버 급 하드웨어가 필요하지 않다는 점에서 간단하다. 코드와 모델이 Mozilla Public License에 따라 출시된다는 점에서 개방적이다. 엔진이 여러 플랫폼에서 실행되고 다양한 언어에 대한 적용할 수 있어야 한다는 점에서 유비쿼터스하다. 엔진의 아키텍처는 원래 [Deep Speech : Scaling up end-to-end 음성 인식에](http://arxiv.org/abs/1412.5567) 의해 동기가 부여되었으나 현재 엔진은 원래의 엔진과 많은 측면에서 다르다. 엔진의 핵심은 음성 스펙트로그램을 수집하고 영어 텍스트 필사본을 생성하도록 훈련된 RNN이다.
 
@@ -88,9 +89,9 @@
 
  
 
-**Geometric Constants -** 네트워크와 관련된 몇 가지 상수
+## Geometric Constants - 네트워크와 관련된 몇 가지 상수
 
-**1. n_input**
+### 1. n_input
 
 최대 n_steps 벡터의 각각은 음성 샘플의 시간 분할 영역의 MFCC 특징 벡터이다. 데이터 세트의 샘플 속도에 따라 MFCC 특징의 수를 정한다. 일반적으로 샘플 속도가 8kHz이면 13 가지 특징을 사용하고, 샘플 속도가 16kHz이면 26 개의 특징을 사용한다. n_input에서 벡터의 차원, 즉 MFCC 특징의 수를 캡처한다. n_input은 기본적으로 26이다.
 
