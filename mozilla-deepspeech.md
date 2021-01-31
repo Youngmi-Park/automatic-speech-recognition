@@ -97,7 +97,7 @@ link: https://deepspeech.readthedocs.io/en/v0.9.3/index.html
 
  
 
-**2. n_context**
+### 2. n_context
 
 RNN에서는 time-slice의 MFCC 특징과 함께 해당 프레임 양쪽의 C 프레임 컨텍스트가 제공된다.
 
@@ -109,7 +109,7 @@ n_context는 기본적으로 9이다.
 
  각 계층의 유닛 개수만 지정하면 된다.
 
-**3. n_hidden_1, n_hidden_2, n_hidden_5**
+### 3. n_hidden_1, n_hidden_2, n_hidden_5
 
 각각 첫 번째 계층, 두 번째 계층의, 다섯 번째 계층의 유닛 수를 말한다. “forward in time” 동작 하는 LSTM RNN으로 구성된다. ( LSTM 장치를 연결하는 위쪽 선인 “cell state” 차원은 입력 차원과 무관하다.)
 
@@ -117,19 +117,19 @@ n_context는 기본적으로 9이다.
 
  
 
-**4. n_cell_dim**
+### 4. n_cell_dim
 
 입력 차원에 관계없이 “cell state” 차원을 자유롭게 선택할 수 있다.
 
 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image067.png)
 
-**5. n_hidden_3**
+### 5. n_hidden_3
 
 LSTM세 번째 계층의 유닛 수는 다음과 같이 n_cell_dim에 의해 결정된다. 
 
  
 
-**6. n_hidden_6**
+### 6. n_hidden_6
 
 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image069.jpg)변수 n_hidden_6는 대상 언어의 문자 수에 1(공백)을 더한다
 
@@ -137,7 +137,7 @@ LSTM세 번째 계층의 유닛 수는 다음과 같이 n_cell_dim에 의해 결
 
 
 
-**Parallel Optimization(****병렬 최적화)**
+## Parallel Optimization(****병렬 최적화)
 
 단일 호스트의 GPU에서 DeepSpeech 모델의 최적화를 구현하는 방법이다. 병렬 최적화는 다양한 형태가 있다. 
 
@@ -145,7 +145,7 @@ LSTM세 번째 계층의 유닛 수는 다음과 같이 n_cell_dim에 의해 결
 
  
 
-**1. Asynchronous Parallel Optimization** **비동기 병렬 최적화**
+### 1. Asynchronous Parallel Optimization 비동기 병렬 최적화
 
 예를 들어 비동기 병렬 최적화에서는 
 
@@ -185,10 +185,7 @@ LSTM세 번째 계층의 유닛 수는 다음과 같이 n_cell_dim에 의해 결
 
  
 
-**
-**
-
-**2. Synchronous Optimization** **동기 최적화**
+### 2. Synchronous Optimization** 동기 최적화  
 
 동기 최적화는 위의 문제를 해결한다. 동기 최적화에서는,
 
