@@ -18,7 +18,7 @@ link: https://deepspeech.readthedocs.io/en/v0.9.3/index.html
 
  
 
-학습 세트에서 단일 발화 <span>![img](img/img3)</span>와 레이블 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image007.png)를 샘플링한다.
+학습 세트에서 단일 발화 <span><img src="img/img3.png"></span>와 레이블 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image007.png)를 샘플링한다.
 
 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image009.jpg)
 
