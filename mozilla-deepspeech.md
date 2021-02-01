@@ -5,21 +5,20 @@ link: https://deepspeech.readthedocs.io/en/v0.9.3/index.html
 
 중국 바이두 연구소의 Baidu Deep Speech를 모태로 한 오픈소스 음성 인식 엔진이다. 소스 코드가 모태는 아니고, 기계학습 모델 논문을 참고한 것이다. Tensorflow를 활용하였으며 사이트에서 레시피를 제공하고 있다.
 
+<div>
 ![img](img/img1.png)
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image003.jpg)
- 
+![img](img/img2.png)
+</div>
 
 ------
 
-
-
 ## ARCHITECTURE AND TRAINING
 
-이 프로젝트의 목표는 간단하고 개방적이며 유비쿼터스( simple, open, and ubiquitous) 음성 인식 엔진을 만드는 것이다. 엔진을 실행하는데 서버 급 하드웨어가 필요하지 않다는 점에서 간단하다. 코드와 모델이 Mozilla Public License에 따라 출시된다는 점에서 개방적이다. 엔진이 여러 플랫폼에서 실행되고 다양한 언어에 대한 적용할 수 있어야 한다는 점에서 유비쿼터스하다. 엔진의 아키텍처는 원래 [Deep Speech : Scaling up end-to-end 음성 인식에](http://arxiv.org/abs/1412.5567) 의해 동기가 부여되었으나 현재 엔진은 원래의 엔진과 많은 측면에서 다르다. 엔진의 핵심은 음성 스펙트로그램을 수집하고 영어 텍스트 필사본을 생성하도록 훈련된 RNN이다.
+이 프로젝트의 목표는 간단하고 개방적이며 유비쿼터스(simple, open, and ubiquitous) 음성 인식 엔진을 만드는 것이다. 엔진을 실행하는데 서버 급 하드웨어가 필요하지 않다는 점에서 간단하다. 코드와 모델이 Mozilla Public License에 따라 출시된다는 점에서 개방적이다. 엔진이 여러 플랫폼에서 실행되고 다양한 언어에 대한 적용할 수 있어야 한다는 점에서 유비쿼터스하다. 엔진의 아키텍처는 원래 [Deep Speech : Scaling up end-to-end 음성 인식에](http://arxiv.org/abs/1412.5567) 의해 동기가 부여되었으나 현재 엔진은 원래의 엔진과 많은 측면에서 다르다. 엔진의 핵심은 음성 스펙트로그램을 수집하고 영어 텍스트 필사본을 생성하도록 훈련된 RNN이다.
 
  
 
-학습 세트에서 단일 발화 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image005.png)와 레이블 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image007.png)를 샘플링한다.
+학습 세트에서 단일 발화 <span>![img](img/img3)</span>와 레이블 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image007.png)를 샘플링한다.
 
 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image009.jpg)
 
