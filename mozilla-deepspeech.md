@@ -15,7 +15,10 @@ link: https://deepspeech.readthedocs.io/en/v0.9.3/index.html
 ## ARCHITECTURE AND TRAINING
 
 이 프로젝트의 목표는 간단하고 개방적이며 유비쿼터스(simple, open, and ubiquitous) 음성 인식 엔진을 만드는 것이다. 엔진을 실행하는데 서버 급 하드웨어가 필요하지 않다는 점에서 간단하다. 코드와 모델이 Mozilla Public License에 따라 출시된다는 점에서 개방적이다. 엔진이 여러 플랫폼에서 실행되고 다양한 언어에 대한 적용할 수 있어야 한다는 점에서 유비쿼터스하다. 엔진의 아키텍처는 원래 [Deep Speech : Scaling up end-to-end 음성 인식에](http://arxiv.org/abs/1412.5567) 의해 동기가 부여되었으나 현재 엔진은 원래의 엔진과 많은 측면에서 다르다. 엔진의 핵심은 음성 스펙트로그램을 수집하고 영어 텍스트 필사본을 생성하도록 훈련된 RNN이다.
-
+<br>
+Deep speech는 소음환경, 잔향, 화자변이에 매우 좋다. 음소(Phoneme) 사전 구축이 필요없고 음소라는 개념도 불필요하다. 발음 사전(lexicon) 단위의 변환을 거치지 않는다. 종단 간 학습을 이용한 음성인식은 주어진 음성을 음소 및 형태소를 거치지 않고 바로 단어나 문장으로 변환할 수 있다.) 여러 중간 단계들을 생략해 음소 단위로 훈련을 할 필요 없다. 오디오 특징(feature)을 입력으로 하고 일련의 글자(character) 혹은 단어들을 출력으로 하는 방식으로 수행한다. 
+<br>
+종단간 학습 모델은 음성(raw waveform) 그리고 이에 해당하는 텍스트 (text)만 있는 데이터를 가지고만 모델을 학습시킨다. 일단 이러한 학습 데이터를 넣어주면 중간 과정 필요없이 모델이 알아서 다 배울 수 있고 최종출력은 KenLM을 활용하여 교정한다.
  
 
 학습 세트에서 단일 발화 <span><img src="img/img3.png"></span>와 레이블 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image007.png)를 샘플링한다.
