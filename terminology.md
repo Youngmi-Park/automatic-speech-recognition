@@ -12,3 +12,11 @@ x축은 시간(Time), y축은 주파수(Frequency), z 축은 진폭(Amplitude)�
 인공 신경망의 각 레이어 노드에서 학습할 때 마다 일부 노드를 사용하지 않고 학습을 진행한다.<br>
 최종적으로 인공 신경망으로도 과적합을 방지해주며 실제 테스트에서도 좋은 성능을 보여준다.
 : http://dmqm.korea.ac.kr/activity/seminar/273
+
+
+##정리해야하는 것들
+### CTC
+### beam search
+### scorer
+### end to end asr
+### phoneme
