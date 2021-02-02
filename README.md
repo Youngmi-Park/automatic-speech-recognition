@@ -18,7 +18,6 @@ e.g. 기존 언어 모델을 뉴스 코퍼스에서 학습시킨 언어 모델�
 <br><br>
 
 ## End-to-end Model
-
 최근에는 엔드투엔드(end-to-end)로 접근하려는 시도도 계속되고 있다. 아래 수식과 같이 음성 시퀀스 *O* 를 입력 받아 바로 단어 시퀀스 *W* 를 예측하는 모델이다. 거의 대부분 딥러닝 기반 모델들이다. 이와 관련한 모델로는 [Listen, Attend and Spell](https://ratsgo.github.io/speechbook/docs/neuralam/las), [Deep Speech](https://ratsgo.github.io/speechbook/docs/neuralam/deepspeech) 등이 있다. 이 시스템에서는 언어모델 등의 도움 없이 바로 단어 시퀀스 *W*를 디코딩 결과로 리턴한다.
 
 
@@ -28,7 +27,7 @@ $$
 \hat{W}= \underset{W∈L}{argmax}\; P(W|O)
 $$
 
-d> 종단간 음성인식의 단점 </bold>
+**종단간 음성인식의 단점**
 학습을 위한 데이터가 많이 필요하다.( Baidu의 DeepSpeech는 무려 10,000 시간의 데이터로 학습되었다.) 엄청난 양의 텍스트가 붙은 음성 데이터를 확보하기 위해서는 많은 돈이 필요하기 때문에 대부분 글로벌 대기업이다.
 
 
