@@ -24,7 +24,7 @@ Deep speech는 소음환경, 잔향, 화자변이에 매우 좋다. 음소(Phone
 학습 세트에서 단일 발화 *x*와 레이블 *y*를 샘플링한다.
 <img src="https://user-images.githubusercontent.com/53163222/107055866-12909800-6815-11eb-8114-91c9c95f328b.png">
 
-<span><img width="25px" src="https://user-images.githubusercontent.com/53163222/107057666-0e657a00-6817-11eb-84b6-69981e8c1c10.png"></span>: 각 발화는 길이 <span><img width="25px" src="https://user-images.githubusercontent.com/53163222/107057028-546e0e00-6816-11eb-91da-e3942de176ac.png"></span>의 시계열 데이터이다. *(i)**는 수많은 데이터셋 중에 i번째 데이터셋*
+<span><img width="28px" src="https://user-images.githubusercontent.com/53163222/107057666-0e657a00-6817-11eb-84b6-69981e8c1c10.png"></span>: 각 발화는 길이 <span><img width="28px" src="hhttps://user-images.githubusercontent.com/53163222/107057850-381ea100-6817-11eb-8023-a445088a37f8.png"></span>의 시계열 데이터이다. *(i)**는 수많은 데이터셋 중에 i번째 데이터셋*
 
 모든 시간 조각은 오디오 기능의 벡터이다. 모델은 MFCC를 사용한다. 입력 X와 정답 Y가 있다면 X는 t초마다 p번째 주파수의 크기를 나타내는 스펙트로그램[[1\]](#_ftn1) 형태의 데이터이고 아래와 같이 표현할 수 있다. 
 
