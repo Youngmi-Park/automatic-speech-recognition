@@ -97,6 +97,7 @@ n_context는 기본적으로 9이다.
 
 <br>
 *일부 비 순환 계층: 각 계층의 유닛 개수만 지정하면 된다.*
+
 ### 3. n_hidden_1, n_hidden_2, n_hidden_5
 각각 첫 번째 계층, 두 번째 계층의, 다섯 번째 계층의 유닛 수를 말한다. “forward in time” 동작 하는 LSTM RNN으로 구성된다. ( LSTM 장치를 연결하는 위쪽 선인 “cell state” 차원은 입력 차원과 무관하다.)
 
@@ -105,8 +106,7 @@ n_context는 기본적으로 9이다.
 ### 4. n_cell_dim
 
 입력 차원에 관계없이 “cell state” 차원을 자유롭게 선택할 수 있다.
-
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image067.png)
+<img src="https://user-images.githubusercontent.com/53163222/107065310-f80fec00-681f-11eb-9f7d-3d89460be3bb.png">
 
 ### 5. n_hidden_3
 
