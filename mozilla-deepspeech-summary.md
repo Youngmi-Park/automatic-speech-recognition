@@ -33,12 +33,10 @@ Deep speech는 소음환경, 잔향, 화자변이에 매우 좋다. 음소(Phone
 <img src="https://user-images.githubusercontent.com/53163222/107057072-6059d000-6816-11eb-9d12-fe442f723277.png">
 </div>
 
-RNN의 목표는를 <img src="https://user-images.githubusercontent.com/53163222/107061212-3d7dea80-681b-11eb-94a0-d1da3694bdde.png")이용해 입력 시퀀스 *x*를 전사 *y*에 대한 문자 확률 시퀀스로 변환하는 것이다.
-
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image021.jpg)
-
- 
-
+RNN의 목표는를 <img src="https://user-images.githubusercontent.com/53163222/107061212-3d7dea80-681b-11eb-94a0-d1da3694bdde.png">이용해 입력 시퀀스 *x*를 전사 *y*에 대한 문자 확률 시퀀스로 변환하는 것이다.
+<br>
+<img src="https://user-images.githubusercontent.com/53163222/107063242-7d45d180-681d-11eb-8f2d-5a8cb09c42a4.png">
+<br>
 이 시스템의 RNN 모델은 총 5개의 은닉 유닛 계층으로 구성되어있다.
 
 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image023.png) : 입력 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image005.png)
