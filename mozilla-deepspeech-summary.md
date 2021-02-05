@@ -40,7 +40,7 @@ RNN의 목표는를 <img src="https://user-images.githubusercontent.com/53163222
 이 시스템의 RNN 모델은 총 5개의 은닉 유닛 계층으로 구성되어있다.
 
 *h(0)*: 입력 *X*
-*h(l)* :  계층 *l*의 은닉 유닛
+*h(l)*:  계층 *l*의 은닉 유닛
 
 이 모델에서 1~3층은 반복되지 않는다. 첫 번째 레이어의 경우, 각 시간 t에서의 출력은 MFCC frame *Xt* 와 context of *C*에 따라 다르다. (모델은 C=9 사용) 나머지 비 순환 계층은 각 시간 단계에 대해 독립적인 데이터에서 작동한다. 따라 처음 3개의 레이어는 다음과 같이 계산된다.
 <br>
@@ -89,30 +89,18 @@ RNN의 목표는를 <img src="https://user-images.githubusercontent.com/53163222
 ## Geometric Constants - 네트워크와 관련된 몇 가지 상수
 
 ### 1. n_input
-
 최대 n_steps 벡터의 각각은 음성 샘플의 시간 분할 영역의 MFCC 특징 벡터이다. 데이터 세트의 샘플 속도에 따라 MFCC 특징의 수를 정한다. 일반적으로 샘플 속도가 8kHz이면 13 가지 특징을 사용하고, 샘플 속도가 16kHz이면 26 개의 특징을 사용한다. n_input에서 벡터의 차원, 즉 MFCC 특징의 수를 캡처한다. n_input은 기본적으로 26이다.
 
- 
-
 ### 2. n_context
-
 RNN에서는 time-slice의 MFCC 특징과 함께 해당 프레임 양쪽의 C 프레임 컨텍스트가 제공된다.
-
 n_context는 기본적으로 9이다.
 
- 
-
-**<일부 비 순환 계층> **
-
- 각 계층의 유닛 개수만 지정하면 된다.
-
+<br>
+*일부 비 순환 계층: 각 계층의 유닛 개수만 지정하면 된다.*
 ### 3. n_hidden_1, n_hidden_2, n_hidden_5
-
 각각 첫 번째 계층, 두 번째 계층의, 다섯 번째 계층의 유닛 수를 말한다. “forward in time” 동작 하는 LSTM RNN으로 구성된다. ( LSTM 장치를 연결하는 위쪽 선인 “cell state” 차원은 입력 차원과 무관하다.)
 
-![이미지는 RNN 내에서 이전 시간 단계에서 이후 시간 단계로의 데이터 흐름을 나타내는 화살표가있는 LSTM 셀이있는 순환 신경망의 다이어그램을 보여줍니다.](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image066.png)
-
- 
+<img src="https://user-images.githubusercontent.com/53163222/107065094-ba12c800-681f-11eb-8802-c13688271f7b.png">
 
 ### 4. n_cell_dim
 
