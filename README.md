@@ -46,6 +46,7 @@ ASR의 성능은 Word Error Rate (WER)로 계산한다. 말한 단어 중에 몇
   + [AI Hub](http://www.aihub.or.kr/aidata/105) 한국어 음성 데이터 신청 및 다운로드
   + Language Model 공부
   + code Review 
+  + 한글화 작업 진행
   
   
 
