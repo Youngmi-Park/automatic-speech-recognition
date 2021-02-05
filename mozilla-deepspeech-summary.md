@@ -6,8 +6,8 @@ link: https://deepspeech.readthedocs.io/en/v0.9.3/index.html
 중국 바이두 연구소의 Baidu Deep Speech를 모태로 한 오픈소스 음성 인식 엔진이다. 소스 코드가 모태는 아니고, 기계학습 모델 논문을 참고한 것이다. Tensorflow를 활용하였으며 사이트에서 레시피를 제공하고 있다.
 
 <div>
-<img src="img/img1.png">
-<img src="img/img2.png">
+<img src="https://user-images.githubusercontent.com/53163222/107055756-f7be2380-6814-11eb-9980-71a962375735.png">
+<img src="https://user-images.githubusercontent.com/53163222/107055770-fab91400-6814-11eb-9924-dac3f8d9f84b.png">
 </div>
 
 ------
