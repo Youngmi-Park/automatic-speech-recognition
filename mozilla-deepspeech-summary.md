@@ -26,14 +26,14 @@ Deep speech는 소음환경, 잔향, 화자변이에 매우 좋다. 음소(Phone
 
 <span><img width="28px" src="https://user-images.githubusercontent.com/53163222/107057666-0e657a00-6817-11eb-84b6-69981e8c1c10.png"></span>: 각 발화는 길이 <span><img width="28px" src="https://user-images.githubusercontent.com/53163222/107057983-60a69b00-6817-11eb-9b67-b04732a1655a.png"></span>의 시계열 데이터이다. - (i)는 수많은 데이터셋 중에 i번째 데이터셋
 
-모든 시간 조각은 오디오 기능의 벡터이다. 모델은 MFCC를 사용한다. 입력 X와 정답 Y가 있다면 X는 t초마다 p번째 주파수의 크기를 나타내는 스펙트로그램[[1\]](#_ftn1) 형태의 데이터이고 아래와 같이 표현할 수 있다. 
+모든 시간 조각은 오디오 기능의 벡터이다. 모델은 MFCC를 사용한다. 입력 *X*와 정답 *Y*가 있다면 *X*는 *t*초마다 *p*번째 주파수의 크기를 나타내는 스펙트로그램[[1\]](#_ftn1) 형태의 데이터이고 아래와 같이 표현할 수 있다. 
 
 <div>
 <img src="https://user-images.githubusercontent.com/53163222/107057055-5df77600-6816-11eb-908f-57cd4b0ef48f.png">
 <img src="https://user-images.githubusercontent.com/53163222/107057072-6059d000-6816-11eb-9d12-fe442f723277.png">
 </div>
 
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image019.jpg)RNN의 목표는를 이용해 입력 시퀀스 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image005.png)를 전사 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image007.png)에 대한 문자 확률 시퀀스로 변환하는 것이다.
+RNN의 목표는를 <img src="https://user-images.githubusercontent.com/53163222/107061212-3d7dea80-681b-11eb-94a0-d1da3694bdde.png")이용해 입력 시퀀스 *x*를 전사 *y*에 대한 문자 확률 시퀀스로 변환하는 것이다.
 
 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image021.jpg)
 
