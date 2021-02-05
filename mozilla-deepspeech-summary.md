@@ -34,19 +34,18 @@ Deep speech는 소음환경, 잔향, 화자변이에 매우 좋다. 음소(Phone
 </div>
 
 RNN의 목표는를 <img src="https://user-images.githubusercontent.com/53163222/107061212-3d7dea80-681b-11eb-94a0-d1da3694bdde.png">이용해 입력 시퀀스 *x*를 전사 *y*에 대한 문자 확률 시퀀스로 변환하는 것이다.
-<br>
+<br><br>
 <img src="https://user-images.githubusercontent.com/53163222/107063242-7d45d180-681d-11eb-8f2d-5a8cb09c42a4.png">
-<br>
+<br><br><br>
 이 시스템의 RNN 모델은 총 5개의 은닉 유닛 계층으로 구성되어있다.
 
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image023.png) : 입력 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image005.png)
+*h(0)*: 입력 *X*
+*h(l)* :  계층 *l*의 은닉 유닛
 
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image025.png) :  계층 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image027.png) 의 은닉 유닛
-
-이 모델에서 1~3층은 반복되지 않는다. 첫 번째 레이어의 경우, 각 시간 t에서의 출력은 MFCC frame ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image029.png) 와 context of ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image031.png)에 따라 다르다. (모델은 C=9 사용) 나머지 비 순환 계층은 각 시간 단계에 대해 독립적인 데이터에서 작동한다. 따라 처음 3개의 레이어는 다음과 같이 계산된다.
-
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image033.jpg)
-
+이 모델에서 1~3층은 반복되지 않는다. 첫 번째 레이어의 경우, 각 시간 t에서의 출력은 MFCC frame *Xt* 와 context of *C*에 따라 다르다. (모델은 C=9 사용) 나머지 비 순환 계층은 각 시간 단계에 대해 독립적인 데이터에서 작동한다. 따라 처음 3개의 레이어는 다음과 같이 계산된다.
+<br>
+<img src="https://user-images.githubusercontent.com/53163222/107064092-7a97ac00-681e-11eb-98e2-53790ddc6e5c.png">
+<br>
 *MFCC(Mel-Frequency Cepstral Coefficient): 음성/음악 등 오디오 신호 처리 분야에서 널리 쓰이는 특징값(Feature) 중 하나이다. MFCC는 오디오 신호에서 추출할 수 있는 feature로, 소리의 고유한 특징을 나타내는 수치이다. 주로 음성 인식, 화자 인식, 음성 합성, 음악 장르 분류 등 오디오 도메인의 문제를 해결하는 데 사용된다.
 
  
