@@ -21,7 +21,7 @@ Deep speech는 소음환경, 잔향, 화자변이에 매우 좋다. 음소(Phone
 종단간 학습 모델은 음성(raw waveform) 그리고 이에 해당하는 텍스트 (text)만 있는 데이터를 가지고만 모델을 학습시킨다. 일단 이러한 학습 데이터를 넣어주면 중간 과정 필요없이 모델이 알아서 다 배울 수 있고 최종출력은 KenLM을 활용하여 교정한다.
  
 
-학습 세트에서 단일 발화 *x*와 레이블 *y*를 샘플링한다.
+학습 세트에서 단일 발화 *x*와 레이블 *y*를 샘플링한다.<br>
 <img src="https://user-images.githubusercontent.com/53163222/107055866-12909800-6815-11eb-8114-91c9c95f328b.png">
 
 <span><img width="28px" src="https://user-images.githubusercontent.com/53163222/107057666-0e657a00-6817-11eb-84b6-69981e8c1c10.png"></span>: 각 발화는 길이 <span><img width="28px" src="https://user-images.githubusercontent.com/53163222/107057983-60a69b00-6817-11eb-9b67-b04732a1655a.png"></span>의 시계열 데이터이다. - (i)는 수많은 데이터셋 중에 i번째 데이터셋
