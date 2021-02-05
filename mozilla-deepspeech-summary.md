@@ -83,8 +83,7 @@ RNN의 목표는를 <img src="https://user-images.githubusercontent.com/53163222
  
 
 전체 RNN 모델의 그림은 다음과 같다.
-
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image064.png)
+<img src="https://user-images.githubusercontent.com/53163222/107064799-4f618c80-681f-11eb-8850-bda79b32ff7d.png">
  
 
 ## Geometric Constants - 네트워크와 관련된 몇 가지 상수
