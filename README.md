@@ -30,8 +30,6 @@ $$
 ## ASR의 성능 측정
 ASR의 성능은 Word Error Rate (WER)로 계산한다. 말한 단어 중에 몇 퍼센트의 단어를 틀리게 알아듣는가를 말한다. (e.g.10 단어를 말했을 때, 한 단어를 잘 못 알아들으면 WER는 10%가 된다.) WER는 주변 환경, 언어, 말하는 주제, 발음 등에 따라 많이 달라진다. 때문에 연구자들은 모델을 비교하기 위해 몇 개의 데이터 셋을 정해 놓고 WER를 계산한다. 현재 최고의 ASR 모델들은 약 5% 정도의 WER을 보인다. Human performance는 WER가 더 높게 나온다고 한다.
 
-
-
 ## Open Source
 * ~~Kaldi~~<br>
 레시피 미지원<br>
@@ -50,7 +48,7 @@ ASR의 성능은 Word Error Rate (WER)로 계산한다. 말한 단어 중에 몇
   
 * KoSpeech (테스트 중)
   
-<br><br>
+<br>
 ## Mozilla Deep Speech
 https://github.com/mozilla/DeepSpeech
 
@@ -71,6 +69,13 @@ https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Using-a-Pretra
 ### Paper Review
 1. [Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan](https://github.com/Youngmi-Park/automatic-speech-recognition/edit/main/paper%20review.md)
 2. [Mozilla deepspeech](https://github.com/Youngmi-Park/automatic-speech-recognition/blob/main/mozilla-deepspeech.md)
+
+
+## KoSpeech
+https://github.com/sooftware/KoSpeech
+
+데이터 전처리: https://github.com/sooftware/KoSpeech/wiki/Preparation-before-Training
+
 
 ## Reference
 
