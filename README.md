@@ -48,7 +48,7 @@ ASR의 성능은 Word Error Rate (WER)로 계산한다. 말한 단어 중에 몇
   
 * KoSpeech (테스트 중)
   
-===
+ ---
 
 ## Mozilla Deep Speech
 https://github.com/mozilla/DeepSpeech
