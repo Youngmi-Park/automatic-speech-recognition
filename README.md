@@ -71,7 +71,8 @@ https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Using-a-Pretra
 1. [Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan](https://github.com/Youngmi-Park/automatic-speech-recognition/edit/main/paper%20review.md)
 2. [Mozilla deepspeech](https://github.com/Youngmi-Park/automatic-speech-recognition/blob/main/mozilla-deepspeech.md)
 
-
+ ---
+ 
 ## KoSpeech
 https://github.com/sooftware/KoSpeech
 
