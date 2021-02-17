@@ -77,6 +77,9 @@ https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Using-a-Pretra
 https://github.com/sooftware/KoSpeech
 
 데이터 전처리: https://github.com/sooftware/KoSpeech/wiki/Preparation-before-Training
+* dataset_path 설정
+* transcripts.txt 위치 변경(KoSpeech/data)
+* 각각 학습 진행
 
 
 ## Reference
