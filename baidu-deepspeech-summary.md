@@ -4,7 +4,7 @@ Awni Hannun∗ , Carl Case, Jared Casper, Bryan Catanzaro, Greg Diamos, Erich El
 Baidu Research – Silicon Valley AI Lab
 
 
-### Abstract
+## Abstract
 
 이 논문에서는 End-to-end deep learning을 사용하여 개발된 최첨단 음성 인식 시스템을 소개한다.
 
@@ -41,5 +41,29 @@ GPU에 잘 매핑하기 위해 특별히 RNN 모델을 선택했으며 병렬화
 이러한 아이디어를 종합하면 기존 파이프 라인보다 한 번에 더 간단하면서도 어려운 음성 작업에서 더 나은 성능을 발휘하는 end-to-end speech system을 구축하는 데 충분하다. Deep Speech는 full Switchboard Hub5’00 테스트 셋에서 16.0%의 오류율을 달성한다. (게시된 것들 중 가장 좋은 결과) 또한 자체 구성한 시끄러운 환경에서의 음성 인식 데이터 셋에서 19.1%의 word error rate를 달성했다. (최고의 상용 시스템이 30.5 %의 word error rate)
 
 
-### 2. RNN Training Setup – 모델과 훈련 프레임워크에 대한 설명
+## 2. RNN Training Setup – 모델과 훈련 프레임워크에 대한 설명
+![image](https://user-images.githubusercontent.com/53163222/108289963-c0ffea00-71d2-11eb-81c9-5bd531e951cb.png)
 
+### 2.1 Regularization
+
+RNN의 분산을 더 줄이기 위해 몇 가지 기술을 사용한다. 훈련 중에 드롭 아웃[19]을 5 %-10 % 사이로 설정한다. Feed forward 레이어에는 드롭 아웃을 적용하지만 recurrent hidden activations에는 적용하지 않는다. (네트워크 평가 중 컴퓨터 비전에서 일반적으로 사용되는 기술은 변환 또는 반사에 의해 입력을 무작위로 지터하고, 결과를 투표하거나 평균하는 것이다.)[23] 지터링은 음성인식에서 일반적인 방법은 아니지만 원본 오디오 파일을 왼쪽과 오른쪽으로 5ms만큼 변환한 다음 재계산 후 순방향 전파하고 출력 확률의 평균을 구하는 것이 좋다는 것을 알았다.
+
+테스트에서는 여러 RNN의 앙상블을 사용하여 동일한 방식으로 출력의 평균을 구한다.
+
+*** Dropout**은 인공 신경망의 각 레이어 노드에서 학습할 때 마다 일부 노드를 사용하지 않고 학습을 진행한다. 최종적으로 인공 신경망으로도 과적합을 방지해주며 실제 테스트에서도 좋은 성능을 보여준다.
+
+[19] G. Hinton, N. Srivastava, A. Krizhevsky, I. Sutskever, and R. R. Salakhutdinov. Improving neural networks by preventing co-adaptation of feature detectors. abs/1406.7806, 2014. http://arxiv.org/abs/1406.7806.
+
+[23] A. Krizhevsky, I. Sutskever, and G. Hinton. Imagenet classification with deep convolutional neural networks. In Advances in Neural Information Processing Systems 25, pages 1106–1114, 2012.
+
+### 2.2 Language Model
+
+대량의 레이블된 음성 데이터에서 학습하면 RNN 모델은 읽을 수 있는 문자 수준의 transcription을 생성하는 방법을 배울 수 있다. (실제로 RNN에 의해 예측되는 가장 가능성 있는 문자열은 거의 정확하다. – 외부 언어 제약없이) RNN에 의해 만들어진 오류는 영어 단어의 음성학적으로 그럴듯한 표현인 경향이 있으며 피하기 어렵다.
+
+![image](https://user-images.githubusercontent.com/53163222/108289967-c4937100-71d2-11eb-8403-5c62dafd8bb3.png)
+
+모든 단어나 언어 구조를 듣기 위해 충분한 음성 데이터로 훈련하는 것은 비현실적이기 때문에 이 시스템은 N-gram 언어 모델과 통합하여 레이블이 없는 거대한 텍스트 말뭉치에서 쉽게 학습 할 수 있도록 한다. 비교를 위해 우리의 음성 데이터 세트에는 일반적으로 최대 3 백만 개의 발화가 포함되지만 섹션 5.2의 실험에 사용된 N-gram 언어 모델은 2 억 2 천만 구문의 말뭉치에서 훈련되어 495,000 단어의 어휘를 지원한다.
+
+RNN의 출력이 주어지면 문자의 시퀀스를 찾기 위해 검색을 수행한다. 
+
+c1, c2 …는 RNN 출력과 언어 모델 (언어 모델이 문자열을 단어로 해석)에 따라 가장 가능성이 높다. 특히 결합된 Q(c)를 최대화하는 시퀀스 c를 찾는 것을 목표로 한다. 
