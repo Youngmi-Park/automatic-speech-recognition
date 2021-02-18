@@ -67,9 +67,22 @@ RNN의 분산을 더 줄이기 위해 몇 가지 기술을 사용한다. 훈련 
 RNN의 출력이 주어지면 문자의 시퀀스를 찾기 위해 검색을 수행한다. c1, c2 …는 RNN 출력과 언어 모델 (언어 모델이 문자열을 단어로 해석)에 따라 가장 가능성이 높다. 특히 결합된 Q(c)를 최대화하는 시퀀스 c를 찾는 것을 목표로 한다. 
 
 <img src="https://user-images.githubusercontent.com/53163222/108290171-2e137f80-71d3-11eb-8070-b1b3bbf37db4.png">: RNN의 출력
-<img src="">
+<img src="https://user-images.githubusercontent.com/53163222/108290175-3075d980-71d3-11eb-93d8-8b87e9940e23.png">: 문자 시퀀스
 
-<img src="">
+![image](https://user-images.githubusercontent.com/53163222/108290178-3370ca00-71d3-11eb-8fd0-0b63dfeb921f.png)
+여기서 α와 β는 RNN, 언어 모델 제약 조건 및 문장 길이 사이의 균형을 제어하는 조정 가능한 매개 변수 (교차 검증으로 설정)이다.
+
+<img src="(https://user-images.githubusercontent.com/53163222/108290182-35d32400-71d3-11eb-8828-bc2266ebe9b5.png">:  N-gram 모델에 따른 시퀀스 c의 확률
+
+Hannun 등이 설명한 접근 방식과 유사한 1000-8000 범위의 일반적인 빔 크기로 고도로 최적화된 빔 검색 알고리즘을 사용하여 목표를 최대화한다.[16].
+
+[16] A. Y. Hannun, A. L. Maas, D. Jurafsky, and A. Y. Ng. First-pass large vocabulary continuous speech recognition using bi-directional recurrent DNNs. abs/1408.2873, 2014. http://arxiv.org/abs/1408.2873.
+
+ 
+
+## 3. Optimizations - gpu 최적화
+
+이 논문에서는 네트워크를 고속 실행 (따라서 빠른 교육)할 수 있도록 몇 가지 설계를 했다. 예를 들어 구현이 간단하고 고도로 최적화된 몇 가지 BLAS 호출에만 의존하는 homogeneous 정류 선형 네트워크를 선택했다. 중요한. 실험 속도를 높이기 위해 다중 GPU 학습 [7, 23]을 사용하지만 이를 효과적으로 수행하려면 몇 가지 추가 작업
 <img src="">
 
 <img src="">
