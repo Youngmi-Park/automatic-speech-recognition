@@ -16,9 +16,11 @@ Bo Li, Yanzhang He, Shuo-Yiin Chang ISCSLP(International Symposium on Chinese Sp
 
 전통적인 음성인식의 pipeline은 다음과 같다.
 
+![image](https://user-images.githubusercontent.com/53163222/109803416-5a63dd00-7c64-11eb-9c66-7ad513052f03.png)
 
 
 전통적인 ASR에서 대부분 음향, 발음 및 언어 모델이 구성 요소로 포함되며 각각의 모델은 별도로 훈련된다.
+![image](https://user-images.githubusercontent.com/53163222/109803712-b9c1ed00-7c64-11eb-843f-f02cb41d2dcc.png)
 
 
 
