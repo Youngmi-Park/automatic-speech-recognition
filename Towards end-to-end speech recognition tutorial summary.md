@@ -89,3 +89,16 @@ Online Model은 스트리밍 음성을 처리할 수 있도록 구조적으로 �
  
 
 흥미로운 사실은 CTC-based를 제안했던 저자들이 Online Models을 새롭게 제시하고 있다는 사실이다.(Graves는 RNN-Transducer를, Jaitly는 NT를 각각 제안) 아래 바이두 논문(2017)에 따르면 CTC나 LAS 모델과 비교해서 RNN-Transducer의 인식률이 결코 밀리지 않는다는 주장을 하고 있다. 
+
+하지만 아직 명확하게 LibriSpeech나 WSJ같은 동일한 데이터를 기준으로 SOTA를 증명해낸 내용은 찾기 어렵다. 이후에도 CTC나 LAS의 변형과 새로운 모델도 마찬가지이다.
+
+ Baidu에서 2017년 발표한 논문에서 보인 세 기법 간의 차이를 나타낸 그림
+ 
+현대에 와서는 기존에 제시된 모델의 hierarchies에 변화를 주거나 새롭게 제안되는 기법들(예를 들면 SpecAugment)을 잘 다룰 수 있는 능력이 필요하다. 기존 모델들을 이해하고 새로운 것과 연동시킬 수 있는 언어적 스킬도 중요하다.
+
+### Reference
+http://iscslp2018.org/images/T4_Towards%20end-to-end%20speech%20recognition.pdf
+https://web.stanford.edu/~jurafsky/slp3/9.pdf
+https://ratsgo.github.io/speechbook/docs/decoding#end-to-end-model
+https://jybaek.tistory.com/793 
+
