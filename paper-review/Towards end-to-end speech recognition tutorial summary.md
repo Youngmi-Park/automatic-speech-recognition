@@ -23,7 +23,7 @@ Bo Li, Yanzhang He, Shuo-Yiin Chang ISCSLP(International Symposium on Chinese Sp
 전통적인 ASR에서 대부분 음향, 발음 및 언어 모델이 구성 요소로 포함되며 각각의 모델은 별도로 훈련된다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/53163222/109803712-b9c1ed00-7c64-11eb-843f-f02cb41d2dcc.png">
+<img src="https://user-images.githubusercontent.com/53163222/109904649-e74c7c00-7ce0-11eb-958d-0849cd0407e1.png">
 </p>
 
 
@@ -31,7 +31,7 @@ Bo Li, Yanzhang He, Shuo-Yiin Chang ISCSLP(International Symposium on Chinese Sp
 전통적인 ASR시스템과 달리 End-to-End ASR(Automatic Speech Recognition)은 입력 음성 특징을 자소 또는 단어로 직접 매핑하는 시스템이다. 전통적인 파이프라인을 단순화하고 최종 평가 지표(일반적으로 단어 오류율, WER)와 관련해 최적화하도록 훈련된다.
 
 <p align="center">
-<img src="https://user-images.githubusercontent.com/53163222/109903044-a05d8700-7cde-11eb-8503-8e44f6382535.p">
+<img src="https://user-images.githubusercontent.com/53163222/109903044-a05d8700-7cde-11eb-8503-8e44f6382535.png">
 </p>
 
 입력되는 음성의 특징을 추출하고 Acoustic model을 통하고 decoder에서 언어모델 등이 후처리를 진행한다.
