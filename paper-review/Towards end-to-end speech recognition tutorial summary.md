@@ -110,8 +110,8 @@ Online Model은 스트리밍 음성을 처리할 수 있도록 구조적으로 �
 현대에 와서는 기존에 제시된 모델의 hierarchies에 변화를 주거나 새롭게 제안되는 기법들(예를 들면 SpecAugment)을 잘 다룰 수 있는 능력이 필요하다. 기존 모델들을 이해하고 새로운 것과 연동시킬 수 있는 언어적 스킬도 중요하다.
 
 ### Reference
-http://iscslp2018.org/images/T4_Towards%20end-to-end%20speech%20recognition.pdf
-https://web.stanford.edu/~jurafsky/slp3/9.pdf
-https://ratsgo.github.io/speechbook/docs/decoding#end-to-end-model
-https://jybaek.tistory.com/793 
+[1] http://iscslp2018.org/images/T4_Towards%20end-to-end%20speech%20recognition.pdf
+[2] https://web.stanford.edu/~jurafsky/slp3/9.pdf
+[3] https://ratsgo.github.io/speechbook/docs/decoding#end-to-end-model
+[4] https://jybaek.tistory.com/793 
 
