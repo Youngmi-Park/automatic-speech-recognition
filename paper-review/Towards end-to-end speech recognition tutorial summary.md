@@ -16,14 +16,14 @@ Bo Li, Yanzhang He, Shuo-Yiin Chang ISCSLP(International Symposium on Chinese Sp
 
 전통적인 음성인식의 pipeline은 다음과 같다.
 <p align="center">
-![image](https://user-images.githubusercontent.com/53163222/109803416-5a63dd00-7c64-11eb-9c66-7ad513052f03.png)
+<img src="https://user-images.githubusercontent.com/53163222/109803416-5a63dd00-7c64-11eb-9c66-7ad513052f03.png">
 </p>
 
 
 전통적인 ASR에서 대부분 음향, 발음 및 언어 모델이 구성 요소로 포함되며 각각의 모델은 별도로 훈련된다.
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/53163222/109803712-b9c1ed00-7c64-11eb-843f-f02cb41d2dcc.png)
+<img src="https://user-images.githubusercontent.com/53163222/109803712-b9c1ed00-7c64-11eb-843f-f02cb41d2dcc.png">
 </p>
 
 
@@ -31,7 +31,7 @@ Bo Li, Yanzhang He, Shuo-Yiin Chang ISCSLP(International Symposium on Chinese Sp
 전통적인 ASR시스템과 달리 End-to-End ASR(Automatic Speech Recognition)은 입력 음성 특징을 자소 또는 단어로 직접 매핑하는 시스템이다. 전통적인 파이프라인을 단순화하고 최종 평가 지표(일반적으로 단어 오류율, WER)와 관련해 최적화하도록 훈련된다.
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/53163222/109903044-a05d8700-7cde-11eb-8503-8e44f6382535.png) 
+<img src="https://user-images.githubusercontent.com/53163222/109903044-a05d8700-7cde-11eb-8503-8e44f6382535.p">
 </p>
 
 입력되는 음성의 특징을 추출하고 Acoustic model을 통하고 decoder에서 언어모델 등이 후처리를 진행한다.
@@ -53,7 +53,7 @@ Bo Li, Yanzhang He, Shuo-Yiin Chang ISCSLP(International Symposium on Chinese Sp
 제일 먼저 등장한 것은 [CTC(Connectionist Temporal Classification)](http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.75.6306&rep=rep1&type=pdf) (2006) 인데 오래된 모델인 만큼 유명하다. CTC의 컨셉은 다음과 같다.
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/53163222/109903120-b9663800-7cde-11eb-9d41-67e3477173d4.png)
+<img src="https://user-images.githubusercontent.com/53163222/109903120-b9663800-7cde-11eb-9d41-67e3477173d4.png">
 </p>
 
 Encoder는 Uni 혹은 Bi directional RNN(혹은 LSTM)이 여러 계층으로 구성되어 있고 Encoder로 들어온 입력 데이터는 최종적으로 Softmax를 통과해서 출력된다.
@@ -67,7 +67,7 @@ Encoder는 Uni 혹은 Bi directional RNN(혹은 LSTM)이 여러 계층으로 구
 CTC와 비슷한 시기에 [Listen, Attend and Spell(LAS)](https://arxiv.org/pdf/1508.01211.pdf)(2015)을 Google Brain에서 제안했는데, 이때부터 ASR은 크게 CTC와 LAS로 나뉜다고 할 수 있다. LAS의 개념은 다음과 같이 표현할 수 있다.
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/53163222/109903239-e31f5f00-7cde-11eb-9ec5-70bc0fc8050e.png)
+<img src="https://user-images.githubusercontent.com/53163222/109903239-e31f5f00-7cde-11eb-9ec5-70bc0fc8050e.png">
 </p>
 
 
@@ -96,7 +96,7 @@ Online Model은 스트리밍 음성을 처리할 수 있도록 구조적으로 �
 흥미로운 사실은 CTC-based를 제안했던 저자들이 Online Models을 새롭게 제시하고 있다는 사실이다.(Graves는 RNN-Transducer를, Jaitly는 NT를 각각 제안) 아래 바이두 논문(2017)에 따르면 CTC나 LAS 모델과 비교해서 RNN-Transducer의 인식률이 결코 밀리지 않는다는 주장을 하고 있다. 
 
 <p align="center">
-![image](https://user-images.githubusercontent.com/53163222/109903338-02b68780-7cdf-11eb-82dc-b10747664586.png)
+ <img src="https://user-images.githubusercontent.com/53163222/109903338-02b68780-7cdf-11eb-82dc-b10747664586.png">
 </p>
 
 하지만 아직 명확하게 LibriSpeech나 WSJ같은 동일한 데이터를 기준으로 SOTA를 증명해낸 내용은 찾기 어렵다. 이후에도 CTC나 LAS의 변형과 새로운 모델도 마찬가지이다.
@@ -104,7 +104,7 @@ Online Model은 스트리밍 음성을 처리할 수 있도록 구조적으로 �
  Baidu에서 2017년 발표한 논문에서 보인 세 기법 간의 차이를 나타낸 그림
  
  <p align="center">
-![image](https://user-images.githubusercontent.com/53163222/109903365-0d711c80-7cdf-11eb-9481-434aa5830661.png)
+<img src="https://user-images.githubusercontent.com/53163222/109903365-0d711c80-7cdf-11eb-9481-434aa5830661.png">
 </p>
 
 현대에 와서는 기존에 제시된 모델의 hierarchies에 변화를 주거나 새롭게 제안되는 기법들(예를 들면 SpecAugment)을 잘 다룰 수 있는 능력이 필요하다. 기존 모델들을 이해하고 새로운 것과 연동시킬 수 있는 언어적 스킬도 중요하다.
