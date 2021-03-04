@@ -76,7 +76,7 @@ Online Model은 스트리밍 음성을 처리할 수 있도록 구조적으로 �
 
 [Recurrent Neural Network Transducer](https://arxiv.org/pdf/1303.5778)는 RNN 기반의 언어모델(Language Model)에 [CTC loss](https://ratsgo.github.io/speechbook/docs/neuralam/ctc)를 적용한 모델이다. 음성 입력이 들어오는 중간에도 예측이 가능한, 실시간 음성 인식 모델로 그 구조는 다음과 같다.
 
-![](https://3.bp.blogspot.com/-2Vg5xAvtcnQ/XIauDo6Dg_I/AAAAAAAAD5A/9G-iTpIuKzgPC3BCPSPkiOdVa97dqz1QACLcBGAs/s1600/image1.gif){: width="70%" height="70%"}
+<img width="70%" src="https://3.bp.blogspot.com/-2Vg5xAvtcnQ/XIauDo6Dg_I/AAAAAAAAD5A/9G-iTpIuKzgPC3BCPSPkiOdVa97dqz1QACLcBGAs/s1600/image1.gif">
 
 이는 기존 CTC 모델과의 차이를 보여주는 그림인데, Encoder에 Prediction Network를 연결해서 사용한다. prediction network를 연결시켜 줌으로써 후처리 언어모델의 효과를 얻을 수 있다.
 
