@@ -24,17 +24,14 @@ RNN-LM 융합 기술은 일부 꼬리 단어를 수정하기는 하지만 수많
 
 이 논문에서는 960 시간 LibriSpeech에 대한 접근 방식을 평가한다. 제안된 철자 교정(SC) 모델이 LAS에서 나온 최상위 가설을 직접 수정할 때 WER이 18.6 % 상대적으로 개선되고, 외부 LM을 사용하여 모델에 의해 생성된 확장 된 n-best 목록을 추가로 재 채점할 때 29.0 %의 상대적 개선이 이루어졌다.
 
- 
-
-**2. BASELINE RECOGNITION MODEL**
+## 2. BASELINE RECOGNITION MODEL
 
 이 논문의 실험에 사용된 baseline 모델은 LAS에서 영향을 받은 인코더-디코더 아키텍처로 [14]의 논무에 기반을 두고 있다. 인코더는 mel spectrogram feature x를 입력으로 받고, higher order feature h-enc에 매핑하는 합성곱 LSTM 계층 스택으로 구성된다. 인코더 출력은 attention 메커니즘으로 전달되어 입력 오디오 시퀀스를 텍스트로 나타내는 출력 시퀀스와 정렬하여 다음 출력 기호 yi를 예측하는 데 사용할 인코더 프레임을 결정한다. attention의 출력은 디코더에 전달되는 컨텍스트 벡터 ci다. 마지막으로 디코더는 attention 컨텍스트 ci와 이전 예측 yi-1의 임베딩을 가져와 로짓 h-dec을 생성한다. 이 로짓은 소프트 맥스로 전달되어 출력 토큰에 대한 확률 분포 P(yi|h-dec)를 계산한다. 디코더는 언어 모델과 유사하다고 할 수 있다. 모델은 훈련 데이터에서 교차 엔트로피 손실을 최소화하도록 훈련되었다. 디코더는 일련의 단어 단위(word piece unit) yi를 출력한다. [5, 15, 16].
 
  
+## 3. UTILIZING TEXT-ONLY DATA
 
-**3. UTILIZING TEXT-ONLY DATA**
-
-**3.1. External LM**
+### 3.1. External LM
 
 텍스트 데이터를 통합하는 일반적인 접근 방식은 텍스트 데이터 [1, 2, 6, 7, 8]에서 RNN-LM을 훈련시킨 다음 제안된 다양한 메커니즘을 통해 빔 검색 디코딩 중에 LM을 통합하는 것이다.
 
