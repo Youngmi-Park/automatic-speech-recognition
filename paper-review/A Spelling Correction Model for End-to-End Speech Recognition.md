@@ -39,8 +39,9 @@ RNN-LM 융합 기술은 일부 꼬리 단어를 수정하기는 하지만 수많
 
 LM rescoring은 3.3.3 절에서 소개할 맞춤법 교정기를 평가하는 것을 더 쉽게 하므로 공정한 비교를 위해 기준 LAS 모델에 대해서도 동일하게 수행했다. 특히 추론하는 동안 우리의 목표는 LAS 모델에서 P (y | x) 및 LM에서 PLM (y)의 점수가 주어지면 가장 가능성이 높은 하위 단어 단위 시퀀스를 찾는 것이다.
 
-![image](https://user-images.githubusercontent.com/53163222/110616159-956f8e80-81d7-11eb-8486-849a3a418f64.png) 
-
+<p align="center">
+ <img src="https://user-images.githubusercontent.com/53163222/110616159-956f8e80-81d7-11eb-8486-849a3a418f64.png">
+</p>
 여기서 λ(람다)는 held-out 세트에서 결정된 interpolation(보간) 가중치이다.
 
  
