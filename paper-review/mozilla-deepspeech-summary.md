@@ -97,22 +97,15 @@ n_context는 기본적으로 9이다.
 <img src="https://user-images.githubusercontent.com/53163222/107065094-ba12c800-681f-11eb-8802-c13688271f7b.png">
 
 ### 4. n_cell_dim
-
 입력 차원에 관계없이 “cell state” 차원을 자유롭게 선택할 수 있다.
-<img src="https://user-images.githubusercontent.com/53163222/107065310-f80fec00-681f-11eb-9f7d-3d89460be3bb.png">
 
 ### 5. n_hidden_3
-
 LSTM세 번째 계층의 유닛 수는 다음과 같이 n_cell_dim에 의해 결정된다. 
 
- 
-
 ### 6. n_hidden_6
+변수 n_hidden_6는 대상 언어의 문자 수에 1(공백)을 더한다
 
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image069.jpg)변수 n_hidden_6는 대상 언어의 문자 수에 1(공백)을 더한다
-
-영어 카디널리티 세트: 
-
+영어 카디널리티 세트: {a,b,c, ...,z,space,apostrophe,blank}
 
 
 ## Parallel Optimization(****병렬 최적화)
@@ -149,17 +142,19 @@ LSTM세 번째 계층의 유닛 수는 다음과 같이 n_cell_dim에 의해 결
 
 예를 들어, 
 
-1) CPU에 모델 매개 변수 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image073.png) 가 있고 미니배치 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image075.png) 을 GPU 1에 보내고 미니배치 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image077.png) 을 GPU 2에 보낸다.
+1) CPU에 모델 매개 변수 w 가 있고 미니배치 n 을 GPU 1에 보내고 미니배치 n+1 을 GPU 2에 보낸다.
 
 2) 비동기 처리방법이기 때문에 GPU 2가 GPU 1보다 먼저 완료될 수 있고 CPU의 모델 매개 변수를 업데이트 할 수 있다. 결과적으로 새 모델 매개 변수가 생성되는데 식은 아래와 같다.
 
- ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image079.jpg) ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image080.png)
+![image](https://user-images.githubusercontent.com/53163222/111246080-00dab580-8649-11eb-93ec-dea40459dda0.png)
+
 
 3) 그 다음 GPU 1은 미니 배치를 완료하고 매개 변수를 다음과 같이 업데이트 한다.
 
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image082.jpg)![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image083.jpg)![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image084.png)
+![image](https://user-images.githubusercontent.com/53163222/111246817-48ae0c80-864a-11eb-86e0-41c18827ab8f.png)
+ng)
 
-여기서 문제는 가 에서 평가된다는 것이다. 따라서 기울기가 잘못된 위치에서 평가되기 때문에 약간 부정확할 수 있다. 이는 모델의 동기 업데이트를 통해 대응할 수 있지만 여전히 문제는 있다.
+여기서 문제는 <img src="https://user-images.githubusercontent.com/53163222/111246957-90cd2f00-864a-11eb-9882-59dbc11e713e.png">가 <img src="https://user-images.githubusercontent.com/53163222/111247001-a04c7800-864a-11eb-945a-084d960f8577.png">에서 평가된다는 것이다. 따라서 기울기가 잘못된 위치에서 평가되기 때문에 약간 부정확할 수 있다. 이는 모델의 동기 업데이트를 통해 대응할 수 있지만 여전히 문제는 있다.
 
  
 
@@ -169,7 +164,7 @@ LSTM세 번째 계층의 유닛 수는 다음과 같이 n_cell_dim에 의해 결
 
 1) 모델을 CPU 메모리에 배치한다. 
 
-2) ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image086.png) GPU 중 하나에 현재 모델 매개 변수와 함께 데이터의 미니 배치가 제공된다. 
+2) G GPU 중 하나에 현재 모델 매개 변수와 함께 데이터의 미니 배치가 제공된다. 
 
 3) 미니 배치를 사용하여 GPU는 모든 모델 매개 변수에 대한 기울기를 계산하고 기울기를 CPU로 다시 보낸다.
 
@@ -183,7 +178,7 @@ LSTM세 번째 계층의 유닛 수는 다음과 같이 n_cell_dim에 의해 결
 
 <단점>
 
-한 번에 하나의 GPU 만 사용할 수 있다. 따라서 다중 GPU 설정이 있는 경우(![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image071.png) >1), GPU 중 하나를 제외하고 모두 유휴 상태로 유지된다. 
+한 번에 하나의 GPU 만 사용할 수 있다. 따라서 다중 GPU 설정이 있는 경우(G>1), GPU 중 하나를 제외하고 모두 유휴 상태로 유지된다. 
 
  
 
@@ -195,31 +190,29 @@ LSTM세 번째 계층의 유닛 수는 다음과 같이 n_cell_dim에 의해 결
 
 1) 모델은 CPU 메모리에 배치된다.
 
-2) 비동기 최적화와 같이 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image071.png) GPU는 현재 모델 매개 변수와 함께 데이터의 미니 배치를 얻는다.
+2) 비동기 최적화와 같이 G GPU는 현재 모델 매개 변수와 함께 데이터의 미니 배치를 얻는다.
 
 3) 각 GPU의 미니 배치를 사용하여 모든 모델 매개 변수에 대한 기울기를 계산하고 기울기를 CPU로 다시 보낸다.
 
 4) 비동기 최적화와 달리 CPU는 각 GPU가 완료될 때까지 기다린다.
 
-5) ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image071.png) GPU의 평균 기울기로 모델을 업데이트한다.
+5) G GPU의 평균 기울기로 모델을 업데이트한다.
 
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image088.jpg)
+![image](https://user-images.githubusercontent.com/53163222/111247120-d12cad00-864a-11eb-85c4-598b62ed5d7d.png)
 
 <장점>
 
-\- 비동기 병렬 최적화와 마찬가지로 여러 GPU를 병렬로 사용할 수 있다. 
+- 비동기 병렬 최적화와 마찬가지로 여러 GPU를 병렬로 사용할 수 있다. 
 
-\- 잘못된 기울기 문제가 없다. (실제로 단일 미니 배치로 작업하는 것처럼 수행된다.)
+- 잘못된 기울기 문제가 없다. (실제로 단일 미니 배치로 작업하는 것처럼 수행된다.)
 
 <단점>
 
 하이브리드 병렬 최적화는 완벽하지 않다. 
 
-\- 하나의 GPU가 다른 모든 GPU보다 느리면 이 GPU가 미니 배치를 완료할 때까지 나머지는 유휴 상태에 있어야한다. 이는 처리량을 저하시킬 수 있다. 
+- 하나의 GPU가 다른 모든 GPU보다 느리면 이 GPU가 미니 배치를 완료할 때까지 나머지는 유휴 상태에 있어야한다. 이는 처리량을 저하시킬 수 있다. 
 
- 
-
-\* 모든 GPU의 제조사와 모델이 동일하다면 이 문제를 최소화할 수 있다. 
+* 모든 GPU의 제조사와 모델이 동일하다면 이 문제를 최소화할 수 있다. 
 
 상대적으로 하이브리드 병렬 최적화는 더 많은 장점과 적은 단점이 있기 때문에 하이브리드 모델을 사용한다.
 
