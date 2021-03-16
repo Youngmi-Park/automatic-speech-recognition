@@ -50,29 +50,25 @@ RNN의 목표는를 <img src="https://user-images.githubusercontent.com/53163222
 
  
 
-여기서 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image035.png)는 계층 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image027.png)의 가중치 행렬과 편향 매개 변수이고, 활성화 함수는 clipped ReLu로 0 ~ 20 사이의 값만 사용한다.
-
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image037.png)
-
+여기서 <img src="https://user-images.githubusercontent.com/53163222/111245136-81001b80-8647-11eb-88b8-f6e368dfd37a.png">는 계층 l의 가중치 행렬과 편향 매개 변수이고, 활성화 함수는 clipped ReLu로 0 ~ 20 사이의 값만 사용한다.
  
+![image](https://user-images.githubusercontent.com/53163222/111245310-c91f3e00-8647-11eb-8857-be306d0d8270.png)
 
 네 번째 층은 순환 계층이다. 이 계층에는 순방향 반복 은닉 유닛이 포함된다.
 
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image039.jpg)
+![image](https://user-images.githubusercontent.com/53163222/111245339-d3413c80-8647-11eb-899c-c17dc38bed33.png)
 
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image041.png) 는 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image043.png)번째 발화에 대해 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image045.png) 에서![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image047.png) 까지 순차적으로 계산되어야 한다.
+<img src="https://user-images.githubusercontent.com/53163222/111245399-ed7b1a80-8647-11eb-9fc1-2c4472a95f5a.png"> 는 i번째 발화에 대해 t=1에서 t=T(i) 까지 순차적으로 계산되어야 한다.
 
  
 
 다섯 번째 비 순환 계층은 순방향 유닛을 입력으로 사용한다.
 
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image049.jpg)
+![image](https://user-images.githubusercontent.com/53163222/111245503-13082400-8648-11eb-9fa3-eedeef8f7412.png) 
 
- 
+출력 계층은 알파벳의 각 시간 슬라이스 t 와 문자 k 에 대해 예측된 문자 확률에 해당하는 표준 logit이다.
 
-출력 계층은 알파벳의 각 시간 슬라이스 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image051.png) 와 문자 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image053.png) 에 대해 예측된 문자 확률에 해당하는 표준 logit이다.
-
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image055.jpg)
+![image](https://user-images.githubusercontent.com/53163222/111245521-1dc2b900-8648-11eb-9726-96ffb04a2ab3.png)
 
 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image057.jpg)![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image059.jpg)
 
