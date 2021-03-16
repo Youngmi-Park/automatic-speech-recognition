@@ -70,14 +70,11 @@ RNN의 목표는를 <img src="https://user-images.githubusercontent.com/53163222
 
 ![image](https://user-images.githubusercontent.com/53163222/111245521-1dc2b900-8648-11eb-9726-96ffb04a2ab3.png)
 
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image057.jpg)![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image059.jpg)
-
-![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image061.jpg)예측을 계산하고 나면 CTC loss를 계산하여 예측의 오류를 측정한다. (CTC 손실은 문자 간의 전환을 나타내기 위해 위의 공백이 필요하다.) 훈련 중에 ground-truth 문자 시퀀스 ![img](file:///C:/Users/s_py9/AppData/Local/Temp/msohtmlclip1/01/clip_image063.png) 가 주어지면 네트워크 출력과 관련하여 기울기를 평가할 수 있다. 
+예측 <img src="https://user-images.githubusercontent.com/53163222/111245614-4480ef80-8648-11eb-8de0-45c71375b173.png">을 계산하고 나면 CTC loss<img src="https://user-images.githubusercontent.com/53163222/111245625-477be000-8648-11eb-8c8a-b635cbabdf86.png">를 계산하여 예측의 오류를 측정한다. (CTC 손실은 문자 간의 전환을 나타내기 위해 위의 공백이 필요하다.) 훈련 중에 ground-truth 문자 시퀀스 y가 주어지면 네트워크 출력과 관련하여 기울기 <img src="https://user-images.githubusercontent.com/53163222/111245625-477be000-8648-11eb-8c8a-b635cbabdf86.png">를 평가할 수 있다. 
 
 이 시점에서 모든 모델 매개 변수에 대한 기울기 계산은 나머지 네트워크를 통한 역전파를 통해 수행될 수 있다. 훈련을 위해 Adam 방법을 사용한다.
 
  
-
 전체 RNN 모델의 그림은 다음과 같다.
 <img src="https://user-images.githubusercontent.com/53163222/107064799-4f618c80-681f-11eb-8850-bda79b32ff7d.png">
  
