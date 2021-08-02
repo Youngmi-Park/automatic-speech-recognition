@@ -70,8 +70,8 @@ https://github.com/mozilla/DeepSpeech
 https://github.com/Youngmi-Park/automatic-speech-recognition/wiki/Using-a-Pretrained-Model
 
 ### Paper Review
-1. [Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan](https://github.com/Youngmi-Park/automatic-speech-recognition/edit/main/paper%20review.md)
-2. [Mozilla deepspeech](https://github.com/Youngmi-Park/automatic-speech-recognition/blob/main/mozilla-deepspeech.md)
+1. [Deep Speech: Scaling up end-to-end speech recognition, Awni H., Carl C., Jared C., Bryan](https://github.com/Youngmi-Park/Paper-Review/blob/main/ASR/A%20Spelling%20Correction%20Model%20for%20End-to-End%20Speech%20Recognition.md)
+2. [Mozilla deepspeech](https://github.com/Youngmi-Park/Paper-Review/blob/main/ASR/mozilla-deepspeech-summary.md)
 
  ---
  
